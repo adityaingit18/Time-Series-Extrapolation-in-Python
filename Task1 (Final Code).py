@@ -41,11 +41,11 @@ print(f"\nReference date provided: {input_date.date()}")
 print(f"1. Estimated price on the reference date: ${current_price:.2f}")
 print(f"2. Estimated price 1 year forward ({target_date.date()}): ${target_price:.2f}")
 
+# Plotting for visualization
 plt.figure(figsize=(10, 6)) # Make the chart a bit wider to see the future clearly
 plt.plot(df['Dates'], df['Prices'], label='Historical Prices', marker='o')
 plt.plot(df['Dates'], df['Linear_Price'], label='Linear Trend', linestyle='--')
 
-# Plotting for visualization
 plt.scatter([input_date], [current_price], color='blue', zorder=5, s=100, label=f'Current Est: ${current_price:.2f}')
 plt.scatter([target_date], [target_price], color='red', zorder=5, s=100, label=f'1-Year Est: ${target_price:.2f}')
 
