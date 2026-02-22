@@ -14,9 +14,9 @@ price_given = df["Prices"]
 
 # Trendline
 m, c = np.polyfit(date_given, price_given, 1)
+df['Linear_Price'] = (m * date_given) + c
 
 # Deviation of actual price from trendline
-df['Linear_Price'] = (m * date_given) + c
 df['Deviation'] = df['Prices'] - df['Linear_Price']
 monthly_average_deviation = df.groupby('Month')['Deviation'].mean() # Average Deviation / Month
 
