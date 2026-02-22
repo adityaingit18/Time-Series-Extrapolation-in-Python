@@ -1,4 +1,4 @@
-# Natural Gas Price Estimation for Arbitrage
+# TASK 1: Natural Gas Price Estimation for Arbitrage
 - As a quantitative researcher for JP Morgan Chase & Co., I was given a task where I learn that the current process is to take a monthly snapshot of prices from a 
 market data provider, which represents the market price of natural gas delivered at the end of each calendar month.
 
@@ -16,3 +16,16 @@ to predict the extrapolation and estimation of input date by any user.
 # USAGE
 This script prompts the user to input a reference date where the whole model takes this date as an input (in MM/DD/YY format) and then estimates the price value at the reference
 date and also estimates (forcasts) the value of the price one year forward to the reference input entered by the user.
+
+# TASK 2: Price a Commodity Storage Contract
+- The client wants to start trading as soon as possible. They believe the winter will be colder than expected, so they want to buy gas now to store and sell in winter in order to take advantage of the resulting increase in gas prices. They ask me to write a script that they can use to price the contract.
+- I have to create a prototype pricing model that can go through further validation and testing before being put into production. this model may be the basis for fully automated quoting to clients, but for now, the desk will use it with manual oversight to explore options with the client.
+- I write a python code where the client can enter his inputs (multiple inputs) as follows:
+(1) Injection dates,
+(2) Withdrawal dates,
+(3) The prices at which the commodity can be purchased/sold on those dates,
+(4) The rate at which the gas can be injected/withdrawn,
+(5) The maximum volume that can be stored,
+(6) Storage costs.
+
+and it calculates the final value of the contract according to the plans of client.
